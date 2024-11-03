@@ -1,4 +1,9 @@
-# Proceso para levantar el proyecto en local
+# Requisitos para ejecución del proyecto en local
+Para ejecutar Auth API en un entorno local es necesario instalar solo los siguientes recursos.
+
+- Docker o Docker Desktop (https://www.docker.com/products/docker-desktop/).
+- Visual Studio Code (https://code.visualstudio.com/).
+- Dev Containers de Microsoft, es una extensión de VS Code la cual puedes encontrar en la sección de extensiones.
 
 # Ejecutar Terraform desde el ambiente local
 Para ejecutar Terraform desde tu consola local se tienen que seguir los siguientes pasos:

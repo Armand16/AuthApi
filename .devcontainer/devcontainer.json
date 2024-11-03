@@ -24,28 +24,25 @@
 			},
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"ms-dotnettools.csharp",
-				"ms-mssql.mssql",
-				"ms-dotnettools.csdevkit",
-				"hashicorp.terraform",
-				"ms-azuretools.vscode-docker"
+				"HashiCorp.terraform",
+				"ms-dotnettools.csdevkit"
 			]
 		}
 	},
 	"features": {
-	  "terraform": "latest",
-	  "azure-cli": "latest"
+	  "ghcr.io/devcontainers/features/terraform:1": {},
+	  "ghcr.io/devcontainers/features/azure-cli:1": {}
 	},
-	"postCreateCommand": "terraform --version && az --version",
 	"remoteUser": "root",
 	"forwardPorts": [
 		5000
 	],
 	"portsAttributes": {
-	  "5000": {
-		"label": "Backend (ASP.NET Core)"
-	  }
+		"5000": {
+			"label": "Backend (ASP.NET Core)"
+		}
 	},
+	"postCreateCommand": "terraform --version && az --version",
 	"shutdownAction": "stopCompose"
   }
   

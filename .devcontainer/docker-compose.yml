@@ -9,7 +9,7 @@ services:
     networks:
       - dev-network
     volumes:
-      - ../..:/workspaces:cached
+      - ..:/workspaces:cached
     command: sleep infinity
     depends_on:
       - db
@@ -22,6 +22,8 @@ services:
       ACCEPT_EULA: Y
     networks:
       - dev-network
+    volumes:
+      - sqlserver-data:/var/opt/mssql
 networks:
   dev-network:
 
