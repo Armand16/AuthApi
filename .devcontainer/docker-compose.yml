@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/dotnet:8.0
+    ports:
+      - "5000:5000"
+      - "5230:5230"
+    networks:
+      - dev-network
+    volumes:
+      - ../..:/workspaces:cached
+    command: sleep infinity
+    depends_on:
+      - db
+
+  db:    
+    image:  mcr.microsoft.com/azure-sql-edge
+    restart: unless-stopped
+    environment:
+      SA_PASSWORD: P@ssword
+      ACCEPT_EULA: Y
+    networks:
+      - dev-network
+networks:
+  dev-network:
+
+volumes:
+  sqlserver-data:
