@@ -2,7 +2,7 @@
 	"name": "Dev Configuration",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
-    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "workspaceFolder": "/workspaces",
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
@@ -25,7 +25,8 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"HashiCorp.terraform",
-				"ms-dotnettools.csdevkit"
+				"ms-dotnettools.csdevkit",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	},

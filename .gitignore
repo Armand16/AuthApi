@@ -32,8 +32,8 @@ wwwroot/index.html
 *.log
 
 # Others
-appsettings*.json
-appsettings.*.json
+# appsettings*.json
+# appsettings.*.json
 *.lock.json
 
 # Local .terraform directories
