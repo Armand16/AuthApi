@@ -9,18 +9,19 @@
 			// Set *default* container specific settings.json values on container create.
 			"settings": {
 				// "workbench.colorTheme": "Visual Studio Dark",
-				// "mssql.connections": [
-				// 	{
-				// 		"server": "localhost,1433",
-				// 		"database": "",
-				// 		"authenticationType": "SqlLogin",
-				// 		"user": "sa",
-				// 		"password": "P@ssw0rd",
-				// 		"emptyPasswordInput": false,
-				// 		"savePassword": false,
-				// 		"profileName": "mssql-container"
-				// 	}
-				// ]
+				"mssql.connections": [
+					{
+						"server": "db",
+						"database": "",
+						"authenticationType": "SqlLogin",
+						"user": "sa",
+						"password": "P@ssword",
+						"emptyPasswordInput": false,
+						"savePassword": true,
+						"profileName": "mssql-container",
+						"trustServerCertificate": true
+					}
+				]
 			},
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
