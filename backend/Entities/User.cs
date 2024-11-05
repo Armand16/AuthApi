@@ -8,4 +8,6 @@ public class User
     public required string Name { get; set; }
     [JsonIgnore]
     public List<UserRole> UserRoles { get; set; } = [];
+    public required string Email { get; set; }
+    public required string Password { get; set; }
 }

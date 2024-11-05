@@ -11,7 +11,7 @@ namespace AuthApi.Migrations
 {
     [DbContext(typeof(AppContext))]
     [Migration("20241105173153_inicio")]
-    partial class inicio
+    partial class Inicio
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
