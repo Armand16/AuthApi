@@ -1,4 +1,4 @@
-using AuthApi.Models;
+using AuthApi.Entities;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,12 +7,9 @@ builder.Services.AddDbContext<AppContext>(options => options.UseSqlServer(builde
 
 var app = builder.Build();
 
-app.MapGet("/", () => {
+app.MapGet("/users", async (AppContext context) => {
 
-    List<User> users = [
-        new(){ Id = 1, Name = "Armando" },
-        new(){ Id = 2, Name = "Javier" },
-    ];
+    var users = await context.Users.ToListAsync();
 
     return Results.Ok(users);
 });

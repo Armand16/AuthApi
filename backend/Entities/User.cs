@@ -1,10 +1,11 @@
-using System;
+using System.Text.Json.Serialization;
 
-namespace AuthApi.Models;
+namespace AuthApi.Entities;
 
 public class User
 {
     public int Id { get; set; }
     public required string Name { get; set; }
+    [JsonIgnore]
     public List<UserRole> UserRoles { get; set; } = [];
 }

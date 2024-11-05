@@ -1,4 +1,4 @@
-using AuthApi.Models;
+using AuthApi.Entities;
 using Microsoft.EntityFrameworkCore;
 
 public class AppContext : DbContext
