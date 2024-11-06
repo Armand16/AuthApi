@@ -1,4 +1,4 @@
-namespace AuthApi.Models.Request;
+namespace AuthApi.Models.Requests;
 
 public class AuthTokenRequest
 {
