@@ -102,4 +102,9 @@ app.MapPost("/auth/token", async (AppContext context, [FromBody]AuthTokenRequest
     });
 });
 
+app.MapPost("/auth/register", async (AppContext context) => {
+
+    
+});
+
 app.Run();
